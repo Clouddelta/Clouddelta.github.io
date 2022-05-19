@@ -1,40 +1,64 @@
-# Site configuration
-domain: "https://clouddelta.github.io/"
-baseurl: "/" # the subpath of your site, e.g. /blog
-url: "http://clouddelta.github.io/" # the base hostname & protocol for your site
-permalink: /:title/
-avatar: /assets/avatar.jpg
-about: /assets/about.jpg
-favicon: /assets/favicon.ico
-basecss: 
-# Theme specific configuration
-title: songroger
-description: >
-  Hi there, My name is Luozhan.Song, usually I use "songroger" as my ID everywhere.
-  I was born and raised in Hunan China. 
-  I'm really fond of beautiful design, drawing etc.
+# For technical reasons, this file is *NOT* reloaded automatically when you use
+# 'bundle exec jekyll serve'. If you change this file, please restart the server process.
 
-# Contact and social media links
-twitter_username: songrogero
-github_username: songroger
-facebook_username: song.roger.1
-instagram_username: songroger198
-linkedin_username: songroger
+title: Bay Jekyll Theme
+description: >- # this means to ignore newlines until "baseurl:"
+  Bay is a minimal Jekyll Theme.
+baseurl: "/bay" # the subpath of the site
+url: "https://eliottvincent.github.io" # the base hostname & protocol for the site
+og_image: /assets/img/profile-pic.jpg
+google_analytics: "UA-121636368-3"
 
-exclude: ['node_modules', 'gulpfile.js', 'package.json']
+header:
+  pages:
+    - name: Home
+      slug: /
+    - name: Work
+    - name: Blog
 
-kramdown:
-  input: GFM
+footer:
+  show_powered_by: true
+  contact:
+    - name: Email
+      value: yourmail@domain.com
+      link: mailto:yourmail@domain.com
+    - name: WeChat
+      value: YourWeChatUsername
+      link: "#"
+  follow:
+    - name: Twitter
+      link: http://twitter.com/YourTwitterUsername
+      username: "@YourTwitterUsername"
+    - name: Facebook
+      link: http://facebook.com/YourFacebookUsername
+    - name: LinkedIn
+      link: http://linkedin.com/in/YourLinkedInUsername
+    - name: GitHub
+      link: http://github.com/YourGitHubUsername
+    - name: Dribbble
+      link: https://dribbble.com/YourDribbbleUsername
+    - name: RSS
+      link: /feed.xml
 
-# If U enable the comment, edit disqus or duoshuo account
-# before deploy your webpage
-enable_comment: false
-# disqus_account: songroger
-
-# gems: ['jekyll-paginate']
-# Pagination
-paginate: 5
-paginate_path: /archive/page:num
-
+# Build settings
+markdown: kramdown
+sass:
+    style: :compressed
 plugins:
-    - jekyll-paginate
+  - jekyll-feed
+
+# Excluded items
+exclude:
+  - .sass-cache/
+  - .jekyll-cache/
+  - feed.xml
+  - gemfiles/
+  - Gemfile
+  - Gemfile.lock
+  - vendor/bundle/
+  - vendor/cache/
+  - vendor/gems/
+  - vendor/ruby/
+
+# Used for defeating caching
+version: 1

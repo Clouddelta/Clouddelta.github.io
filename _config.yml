@@ -3,9 +3,9 @@ domain: "https://clouddelta.github.io/"
 baseurl: "/" # the subpath of your site, e.g. /blog
 url: "http://songroger.github.io/" # the base hostname & protocol for your site
 permalink: /:title/
-avatar: /Clouddelta.github.io/assets/avatar.jpg
-about: /Clouddelta.github.io/assets/about.jpg
-favicon: /Clouddelta.github.io/assets/favicon.ico
+avatar: /assets/avatar.jpg
+about: /assets/about.jpg
+favicon: /assets/favicon.ico
 basecss: 
 # Theme specific configuration
 title: songroger

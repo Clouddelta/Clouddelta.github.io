@@ -1,38 +1,39 @@
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-  <title>{{ site.title }}</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="author" content="songroger">
 
-  <!-- CSS -->
-  <link rel="stylesheet" href="{{ "/assets/css/main.css" | relative_url }}">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Libre+Baskerville:400,400i,700">
-  
-  <!-- Font Awesome -->
-  <link rel="stylesheet" type="text/css" href="{{ site.baseurl }}/assets/css/fontawesome-all.min.css">
+  <title>{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}</title>
 
-  <!-- Favicon -->
-  <link rel="icon" type="image/png" sizes="16x16" href="{{ "/assets/favicon.ico" | relative_url }}">
+  <meta name="description" content="{% if page.excerpt %}{{ page.excerpt | xml_escape | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | xml_escape | strip_html | strip_newlines }}{% endif %}">
 
-  <!-- Google Analytics -->
-  {% if site.google_analytics %}
-  <script>
-      (function(i, s, o, g, r, a, m) {
-          i['GoogleAnalyticsObject'] = r;
-          i[r] = i[r] || function() {
-              (i[r].q = i[r].q || []).push(arguments)
-          }, i[r].l = 1 * new Date();
-          a = s.createElement(o),
-              m = s.getElementsByTagName(o)[0];
-          a.async = 1;
-          a.src = g;
-          m.parentNode.insertBefore(a, m)
-      })(window, document, 'script', '//www.google-analytics.com/analytics.js', 'ga');
+  <!-- Open graph data -->
+  <meta property="og:site_name" content="{{ site.title }}">
+  <meta property="og:title" content="{% if page.title %}{{ page.title }}{% else %}{{ site.title }}{% endif %}">
+  <meta property="og:url" content="{% if page.title %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% else %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% endif %}">
+  <meta property="og:type" content="{% if page.title %}article{% else %}website{% endif %}">
+  <meta property="og:description" content="{% if page.excerpt %}{{ page.excerpt | xml_escape | strip_html | strip_newlines | truncate: 160 }}{% else %}{{ site.description | xml_escape | strip_html | strip_newlines }}{% endif %}">
 
-      ga('create', '{{ site.google_analytics }}', 'auto');
-      ga('send', 'pageview');
+  <!-- Standard Stuff -->
+  <link rel="canonical" href="{% if page.title %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% else %}{{ page.url | replace:'index.html','' | prepend: site.baseurl | prepend: site.url }}{% endif %}"/>
+  <link rel="alternate" type="application/rss+xml" title="{{ site.title }}" href="{{ '/feed.xml' | prepend: site.baseurl | prepend: site.url }}"/>
 
-  </script>
+  <!-- Favicons -->
+  <link rel="shortcut icon" href="{{ site.favicon }}">
+  <meta name="msapplication-TileColor" content="#ffffff">
+  <meta name="msapplication-config" content="/assets/browserconfig.xml">
+  <meta name="theme-color" content="#ffffff">
+
+  <!-- Styles -->
+  {% if site.basecss %}
+    <link rel="stylesheet" href="{{ site.basecss }}">
+  {% else %}
+    <style type="text/css">
+      {% include css/main.css %}
+    </style>
   {% endif %}
+
 
 </head>

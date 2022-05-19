@@ -1,62 +1,40 @@
-# Site settings
-title: A.P
-baseurl: "/ap"
-url: "https://clouddelta.github.io/"
-google_analytics: # Tracking ID, e.g. "UA-000000-01"
+# Site configuration
+domain: "http://songroger.win"
+baseurl: "/murmur" # the subpath of your site, e.g. /blog
+url: "http://songroger.github.io/" # the base hostname & protocol for your site
+permalink: /:title/
+avatar: /murmur/assets/avatar.jpg
+about: /murmur/assets/about.jpg
+favicon: /murmur/assets/favicon.ico
+basecss: 
+# Theme specific configuration
+title: songroger
+description: >
+  Hi there, My name is Luozhan.Song, usually I use "songroger" as my ID everywhere.
+  I was born and raised in Hunan China. 
+  I'm really fond of beautiful design, drawing etc.
 
-# Author
-author:
-  name: KyeongSeob Sim
-  desc: Hello nice to meet you
-  email: ksub0912@gmail.com
-  selfie: assets/img/profile.jpg
+# Contact and social media links
+twitter_username: songrogero
+github_username: songroger
+facebook_username: song.roger.1
+instagram_username: songroger198
+linkedin_username: songroger
 
-# social
-social:
-  email: true
-  behance:
-  bitbucket:
-  dribbble:
-  facebook: Test
-  flickr:
-  github: kssim
-  google_plus:
-  instagram:
-  keybase:
-  linkedin: https://www.linkedin.com/in/kssim/ 
-  pinterest:
-  reddit:
-  soundcloud:
-  stack_exchange:
-  steam:
-  tumblr:
-  gitlab:
-  twitter: Test
-  vimeo:
-  wordpress:
-  youtube:
-  default_txt: "Follow On"
+exclude: ['node_modules', 'gulpfile.js', 'package.json']
 
-# Build settings
-markdown: kramdown
+kramdown:
+  input: GFM
 
-# Assets
-sass:
-  sass_dir: _sass
-  style: compressed
+# If U enable the comment, edit disqus or duoshuo account
+# before deploy your webpage
+enable_comment: false
+# disqus_account: songroger
 
-# Gems
-plugins:
-  - jekyll-paginate
-
-# Permalinks
-permalink: /:year-:month-:day/:title
-paginate_path: "/portfolio/page:num/"
+# gems: ['jekyll-paginate']
+# Pagination
 paginate: 5
-exclude:
-  - "Gemfile"
-  - "Gemfile.lock"
-  - "*.gem"
-  - "LICENSE"
-  - "READE.md"
-  - "screenshot.png"
+paginate_path: /archive/page:num
+
+plugins:
+    - jekyll-paginate

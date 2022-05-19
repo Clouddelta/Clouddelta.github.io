@@ -1,14 +1,14 @@
 # Site settings
-title: test
+title: A.P
 baseurl: "/ap"
 url: "https://clouddelta.github.io/"
 google_analytics: # Tracking ID, e.g. "UA-000000-01"
 
 # Author
 author:
-  name: Jingyun Jia
+  name: KyeongSeob Sim
   desc: Hello nice to meet you
-  email: clouddeltajia@gmail.com
+  email: ksub0912@gmail.com
   selfie: assets/img/profile.jpg
 
 # social

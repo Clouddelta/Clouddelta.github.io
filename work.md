@@ -1,7 +1,7 @@
 ---
-layout: work
-title: Work
-slug: /work
+layout: portfolio
+title: Portfolio
+slug: /portfolio
 items:
   - title: My Interest 1
     image:

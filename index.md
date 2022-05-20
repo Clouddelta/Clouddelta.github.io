@@ -9,9 +9,13 @@ profile_picture:
   Welcome!
 </h1>
 <p>
-  Welcome! This site serves as an example for the Bay Jekyll theme. Bay is a very simple and minimal theme, directly inspired by Dan Grover's <a href="http://dangrover.com">website</a>.
+  Jingyun Jia is a fourth-year undergraduate student at <a href="https://en.nankai.edu.cn/">Nankai University</a>, 
+majoring in statistics in the mathematics department, and also a stat-VISP(visiting international student program) 
+student at UW-Madison.
 </p>
 
 <p>
-  You can find the source code and the instructions on <a href="https://github.com/eliottvincent/bay">GitHub</a>.
+  As a statistics student, he is interested in everything about the data and is trying to tell attractive stories 
+with convincing data analytic approaches.
 </p>
+

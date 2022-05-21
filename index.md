@@ -11,7 +11,7 @@ profile_picture:
 <p>
   Jingyun Jia is a fourth-year undergraduate student at <a href="https://en.nankai.edu.cn/">Nankai University</a>, 
 majoring in statistics in the mathematics department, and also a stat-VISP(visiting international student program) 
-student at UW-Madison.
+student at <a href="https://www.wisc.edu/">UW-Madison</a>.
 </p>
 
 <p>
